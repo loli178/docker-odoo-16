@@ -8,7 +8,7 @@ services:
     depends_on:
       - db16
     ports:
-      - "${WEB_PORT}:8069"
+      - "${WEB_PORT}:8070"
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./config:/etc/odoo
@@ -28,7 +28,7 @@ services:
       - POSTGRES_USER=odoo16
       - PGDATA=/var/lib/postgresql/data/pgdata
     ports:
-      - "${DB_PORT}:5432"
+      - "${DB_PORT}:5433"
     volumes:
       - odoo-db-data:/var/lib/postgresql/data/pgdata
     restart: always
